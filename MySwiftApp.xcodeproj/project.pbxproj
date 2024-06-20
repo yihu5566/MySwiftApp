@@ -17,6 +17,9 @@
 		D6AB05A22C11A99B00F77090 /* main_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = D6AB05A12C11A99B00F77090 /* main_tab.png */; };
 		D6AB05A52C11AF4A00F77090 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AB05A42C11AF4A00F77090 /* Product.swift */; };
 		D6AB05A82C11B79400F77090 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AB05A72C11B79400F77090 /* R.generated.swift */; };
+		D6B1C0C22C23D14100212E4D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1C0C12C23D14100212E4D /* HomeViewController.swift */; };
+		D6B1C0C42C23D1DC00212E4D /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1C0C32C23D1DC00212E4D /* MineViewController.swift */; };
+		D6B1C0C52C23DC0700212E4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61BEFB42C10651900330902 /* Main.storyboard */; };
 		D6DF789E2C129FCA005C5D66 /* Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DF789D2C129FCA005C5D66 /* Deal.swift */; };
 		D6DF78A02C12A02D005C5D66 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DF789F2C12A02D005C5D66 /* FakeData.swift */; };
 		D6DF78A32C12AE2B005C5D66 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DF78A22C12AE2B005C5D66 /* UIColor.swift */; };
@@ -43,6 +46,8 @@
 		D6AB05A12C11A99B00F77090 /* main_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_tab.png; sourceTree = "<group>"; };
 		D6AB05A42C11AF4A00F77090 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		D6AB05A72C11B79400F77090 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		D6B1C0C12C23D14100212E4D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D6B1C0C32C23D1DC00212E4D /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		D6DF789D2C129FCA005C5D66 /* Deal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deal.swift; sourceTree = "<group>"; };
 		D6DF789F2C12A02D005C5D66 /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
 		D6DF78A22C12AE2B005C5D66 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -117,6 +122,8 @@
 				D61BEFBC2C10651B00330902 /* Info.plist */,
 				D6DF78A42C12B6B0005C5D66 /* BaseViewController.swift */,
 				D6DF78A62C12B983005C5D66 /* LoginViewController.swift */,
+				D6B1C0C12C23D14100212E4D /* HomeViewController.swift */,
+				D6B1C0C32C23D1DC00212E4D /* MineViewController.swift */,
 			);
 			path = MySwiftApp;
 			sourceTree = "<group>";
@@ -218,6 +225,7 @@
 				D6AB05A22C11A99B00F77090 /* main_tab.png in Resources */,
 				D6DF78AE2C12E9EB005C5D66 /* phone.png in Resources */,
 				D61BEFB62C10651900330902 /* Base in Resources */,
+				D6B1C0C52C23DC0700212E4D /* Main.storyboard in Resources */,
 				D6DF78AA2C12D4B9005C5D66 /* home_phone.png in Resources */,
 				D6DF78AB2C12D4B9005C5D66 /* test.jpeg in Resources */,
 			);
@@ -296,11 +304,13 @@
 				D6AB05A82C11B79400F77090 /* R.generated.swift in Sources */,
 				D6DF789E2C129FCA005C5D66 /* Deal.swift in Sources */,
 				D61BEFAF2C10651900330902 /* AppDelegate.swift in Sources */,
+				D6B1C0C22C23D14100212E4D /* HomeViewController.swift in Sources */,
 				D6DF78A52C12B6B0005C5D66 /* BaseViewController.swift in Sources */,
 				D6DF78A32C12AE2B005C5D66 /* UIColor.swift in Sources */,
 				D61BEFB12C10651900330902 /* SceneDelegate.swift in Sources */,
 				D6DF78A72C12B983005C5D66 /* LoginViewController.swift in Sources */,
 				D6DF78A02C12A02D005C5D66 /* FakeData.swift in Sources */,
+				D6B1C0C42C23D1DC00212E4D /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

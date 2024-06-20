@@ -97,8 +97,8 @@ class LoginViewController: BaseViewController,ValidatesPhoneNumber,ValidatesPass
         loginButton.layer.cornerRadius = 5
         loginButton.layer.masksToBounds = true
         loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-//        loginButton.setBackgroundImage(UIColor.hexColor(0x0F2F30).toImage(), for: .normal)
-        loginButton.backgroundColor = UIColor.hexColor(0x0F2F30)
+        loginButton.setBackgroundImage(UIColor.hexColor(0x1FC2C3).toImage(), for: .normal)
+//        loginButton.backgroundColor = UIColor.hexColor(0x1FC2C3)
         view.addSubview(loginButton)
 
         loginButton.snp.makeConstraints { make in

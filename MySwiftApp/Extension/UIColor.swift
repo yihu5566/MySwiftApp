@@ -23,13 +23,17 @@ extension UIColor{
     }
     
     func toImage()->UIImage{
-        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
-        UIGraphicsBeginImageContext(rect.size)
+
+        // 定义图像尺寸
+        let imageSize = CGSize(width: 300, height: 100)
+
+        // 开始图像上下文
+        UIGraphicsBeginImageContextWithOptions(imageSize, false, 0)
         let context = UIGraphicsGetCurrentContext()
-        
         context?.setFillColor(self.cgColor)
-        context?.fill(rect)
+        context?.fill(CGRect(origin: .zero, size: imageSize))
         let image = UIGraphicsGetImageFromCurrentImageContext()
+        
         UIGraphicsEndImageContext()
         return image!
         

@@ -11,16 +11,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let button = UIButton(type: .custom)
-        button.setTitle("click", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-        button.addTarget(self, action: #selector(didClick), for: .touchUpInside)
-        view.addSubview(button)
-        button.snp.makeConstraints { make in
-            make.left.top.equalTo(100)
-            make.width.equalTo(100)
-            make.height.equalTo(100)
-        }
+     let homeVC =   HomeViewController()
+        homeVC.tabBarItem.image = UIImage(named: "Image-Tab-Salon-Inactive")
+        homeVC.tabBarItem.selectedImage = UIImage(named: "Image-Tab-Salon-Active")
+        homeVC.tabBarItem.title = "首页"
+      let navigationHomeVC =  UINavigationController(rootViewController: homeVC)
+        self.addChild(navigationHomeVC)
+        
+        
+        let mineVC =   MineViewController()
+           mineVC.tabBarItem.image = UIImage(named: "Image-Tab-My-Inactive")
+           mineVC.tabBarItem.selectedImage = UIImage(named: "Image-Tab-MY-Active")
+           mineVC.tabBarItem.title = "我的"
+         let navigationMineVC =  UINavigationController(rootViewController: mineVC)
+           self.addChild(navigationMineVC)
+           
+         
     }
 
     @objc func didClick() {

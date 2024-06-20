@@ -170,7 +170,7 @@ struct _R {
 
     /// Storyboard `Main`.
     struct main: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
-      typealias InitialController = ViewController
+      typealias InitialController = UIKit.UITabBarController
 
       let bundle: Foundation.Bundle
 
