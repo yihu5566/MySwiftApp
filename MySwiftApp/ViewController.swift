@@ -11,22 +11,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-     let homeVC =   HomeViewController()
+
+        let homeVC = HomeViewController()
         homeVC.tabBarItem.image = UIImage(named: "Image-Tab-Salon-Inactive")
         homeVC.tabBarItem.selectedImage = UIImage(named: "Image-Tab-Salon-Active")
         homeVC.tabBarItem.title = "首页"
-      let navigationHomeVC =  UINavigationController(rootViewController: homeVC)
-        self.addChild(navigationHomeVC)
-        
-        
-        let mineVC =   MineViewController()
-           mineVC.tabBarItem.image = UIImage(named: "Image-Tab-My-Inactive")
-           mineVC.tabBarItem.selectedImage = UIImage(named: "Image-Tab-MY-Active")
-           mineVC.tabBarItem.title = "我的"
-         let navigationMineVC =  UINavigationController(rootViewController: mineVC)
-           self.addChild(navigationMineVC)
-           
-         
+        let navigationHomeVC = UINavigationController(rootViewController: homeVC)
+        addChild(navigationHomeVC)
+
+        let mineVC = MineViewController()
+        mineVC.tabBarItem.image = UIImage(named: "Image-Tab-My-Inactive")
+        mineVC.tabBarItem.selectedImage = UIImage(named: "Image-Tab-MY-Active")
+        mineVC.tabBarItem.title = "我的"
+        let navigationMineVC = UINavigationController(rootViewController: mineVC)
+        addChild(navigationMineVC)
     }
 
     @objc func didClick() {
