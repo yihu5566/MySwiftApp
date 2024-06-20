@@ -6,8 +6,11 @@
 //
 
 import Foundation
+
 class MineViewController: BaseViewController {
     override func viewDidLoad() {
+        self.view.backgroundColor = .white
+
         
     }
 }
