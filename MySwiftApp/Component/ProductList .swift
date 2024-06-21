@@ -109,7 +109,7 @@ class ProductList: UIView, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cellId") as? ProductCell
         if cell == nil{
-            cell = ProductCell()
+            cell = ProductCell(style: .subtitle, reuseIdentifier: "cellId")
         }
         cell?.item = items[indexPath.row]
         return cell!
