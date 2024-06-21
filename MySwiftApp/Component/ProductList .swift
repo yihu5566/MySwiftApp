@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol ProductListDelegate{
+protocol ProductListDelegate:AnyObject{
     func didSelectProduct(product:Product)
 }
 

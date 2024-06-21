@@ -12,7 +12,15 @@ import Kingfisher
 class HomeViewController :BaseViewController,BannerViewDelegate,BannerViewDataSource,ProductListDelegate{
     func didSelectProduct(product: Product) {
         print("index--->",product.name)
+        let detailVC = DetailViewController()
+        detailVC.product = product
+        detailVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(detailVC, animated: true)
 
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hidesBottomBarWhenPushed = false
     }
     
     func numberOfBanners(_ bannerView: BannerView) -> Int {
@@ -46,6 +54,7 @@ class HomeViewController :BaseViewController,BannerViewDelegate,BannerViewDataSo
         
         let productList = ProductList(frame: .zero)
         productList.items = FakeData.creatProdects()
+        productList.delegate = self
         view.addSubview(productList)
         productList.snp.makeConstraints { make in
             make.left.right.bottom.equalToSuperview()
