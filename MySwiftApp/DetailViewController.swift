@@ -90,7 +90,28 @@ class DetailViewController: BaseViewController {
             make.right.equalTo(topView).offset(-15)
         }
         
+        let bookAtttachment = NSTextAttachment()
+        bookAtttachment.image = R.image.icon_phone()
+        bookAtttachment.bounds = CGRect(x: -2, y: -3, width: bookAtttachment.image?.size.width ?? 20/2, height: (bookAtttachment.image?.size.height ?? 20)/2)
         
+        let bookAtttachmentString = NSAttributedString(attachment: bookAtttachment)
+        let courseCountString = NSMutableAttributedString(string: "")
+        courseCountString.append(bookAtttachmentString)
+        
+        let courseCountStringAfterIcon = NSAttributedString(string: " 共 \(product.total) 讲 更新至 \(product.update) 讲 ")
+        
+        courseCountString.append(courseCountStringAfterIcon)
+        
+        courseCountLable = UILabel(frame: .zero)
+        courseCountLable.textColor = .white
+        courseCountLable.font = UIFont.systemFont(ofSize: 14)
+        courseCountLable.attributedText = courseCountString
+        
+        topView.addSubview(courseCountLable)
+        courseCountLable.snp.makeConstraints { make in
+            make.left.equalTo(topView).offset(20)
+            make.bottom.equalTo(topView).offset(-20)
+        }
         
     }
     func createMiddle()  {

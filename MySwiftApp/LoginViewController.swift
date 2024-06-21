@@ -44,16 +44,15 @@ class LoginViewController: BaseViewController,ValidatesPhoneNumber,ValidatesPass
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         
-        let logoView = UIImageView(image: R.image.main_tab())
+        let logoView = UIImageView(image: R.image.home())
         view.addSubview(logoView)
         logoView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(30)
             make.centerX.equalToSuperview()
         }
-        let phoneIconView = UIImageView(image: R.image.phone())
+        let phoneIconView = UIImageView(image: R.image.icon_phone())
         phoneTextField = UITextField()
         phoneTextField.leftView = phoneIconView
-        phoneTextField.leftView?.backgroundColor = UIColor.green
         phoneTextField.leftViewMode = .always
         phoneTextField.layer.borderColor = UIColor.hexColor(0x333333).cgColor
         phoneTextField.layer.borderWidth = 1
@@ -70,11 +69,10 @@ class LoginViewController: BaseViewController,ValidatesPhoneNumber,ValidatesPass
             make.height.equalTo(50)
         }
 
-        let passwordIconView = UIImageView(image: R.image.password())
+        let passwordIconView = UIImageView(image: R.image.icon_password())
         passwordTextField = UITextField()
         passwordTextField.leftView = passwordIconView
         passwordTextField.leftViewMode = .always
-        passwordTextField.leftView?.backgroundColor = UIColor.green
         passwordTextField.layer.borderColor = UIColor.hexColor(0x333333).cgColor
         passwordTextField.layer.borderWidth = 1
         passwordTextField.textColor = UIColor.hexColor(0x333333)
@@ -97,8 +95,7 @@ class LoginViewController: BaseViewController,ValidatesPhoneNumber,ValidatesPass
         loginButton.layer.cornerRadius = 5
         loginButton.layer.masksToBounds = true
         loginButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-        loginButton.setBackgroundImage(UIColor.hexColor(0x1FC2C3).toImage(), for: .normal)
-//        loginButton.backgroundColor = UIColor.hexColor(0x1FC2C3)
+        loginButton.setBackgroundImage(UIColor.hexColor(0xF8892E).toImage(), for: .normal)
         view.addSubview(loginButton)
 
         loginButton.snp.makeConstraints { make in

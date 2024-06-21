@@ -49,21 +49,39 @@ struct _R {
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 5 images.
+  /// This `_R.image` struct is generated, and contains static references to 11 images.
   struct image {
     let bundle: Foundation.Bundle
+
+    /// Image `Image-Tab-My-Active`.
+    var imageTabMyActive: RswiftResources.ImageResource { .init(name: "Image-Tab-My-Active", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `Image-Tab-My-Inactive`.
+    var imageTabMyInactive: RswiftResources.ImageResource { .init(name: "Image-Tab-My-Inactive", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `Image-Tab-Salon-Active`.
+    var imageTabSalonActive: RswiftResources.ImageResource { .init(name: "Image-Tab-Salon-Active", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `Image-Tab-Salon-Inactive`.
+    var imageTabSalonInactive: RswiftResources.ImageResource { .init(name: "Image-Tab-Salon-Inactive", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `home`.
+    var home: RswiftResources.ImageResource { .init(name: "home", path: [], bundle: bundle, locale: LocaleReference.none, onDemandResourceTags: nil) }
+
+    /// Image `home_address`.
+    var home_address: RswiftResources.ImageResource { .init(name: "home_address", path: [], bundle: bundle, locale: LocaleReference.none, onDemandResourceTags: nil) }
 
     /// Image `home_phone`.
     var home_phone: RswiftResources.ImageResource { .init(name: "home_phone", path: [], bundle: bundle, locale: LocaleReference.none, onDemandResourceTags: nil) }
 
-    /// Image `main_tab`.
-    var main_tab: RswiftResources.ImageResource { .init(name: "main_tab", path: [], bundle: bundle, locale: LocaleReference.none, onDemandResourceTags: nil) }
+    /// Image `ic_active_calendar`.
+    var ic_active_calendar: RswiftResources.ImageResource { .init(name: "ic_active_calendar", path: [], bundle: bundle, locale: LocaleReference.none, onDemandResourceTags: nil) }
 
-    /// Image `password`.
-    var password: RswiftResources.ImageResource { .init(name: "password", path: [], bundle: bundle, locale: LocaleReference.none, onDemandResourceTags: nil) }
+    /// Image `icon_password`.
+    var icon_password: RswiftResources.ImageResource { .init(name: "icon_password", path: [], bundle: bundle, locale: LocaleReference.none, onDemandResourceTags: nil) }
 
-    /// Image `phone`.
-    var phone: RswiftResources.ImageResource { .init(name: "phone", path: [], bundle: bundle, locale: LocaleReference.none, onDemandResourceTags: nil) }
+    /// Image `icon_phone`.
+    var icon_phone: RswiftResources.ImageResource { .init(name: "icon_phone", path: [], bundle: bundle, locale: LocaleReference.none, onDemandResourceTags: nil) }
 
     /// Image `test.jpeg`.
     var testJpeg: RswiftResources.ImageResource { .init(name: "test.jpeg", path: [], bundle: bundle, locale: LocaleReference.none, onDemandResourceTags: nil) }
@@ -118,21 +136,27 @@ struct _R {
     }
   }
 
-  /// This `_R.file` struct is generated, and contains static references to 5 resource files.
+  /// This `_R.file` struct is generated, and contains static references to 7 resource files.
   struct file {
     let bundle: Foundation.Bundle
+
+    /// Resource file `home.png`.
+    var homePng: RswiftResources.FileResource { .init(name: "home", pathExtension: "png", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `home_address.png`.
+    var home_addressPng: RswiftResources.FileResource { .init(name: "home_address", pathExtension: "png", bundle: bundle, locale: LocaleReference.none) }
 
     /// Resource file `home_phone.png`.
     var home_phonePng: RswiftResources.FileResource { .init(name: "home_phone", pathExtension: "png", bundle: bundle, locale: LocaleReference.none) }
 
-    /// Resource file `main_tab.png`.
-    var main_tabPng: RswiftResources.FileResource { .init(name: "main_tab", pathExtension: "png", bundle: bundle, locale: LocaleReference.none) }
+    /// Resource file `ic_active_calendar.png`.
+    var ic_active_calendarPng: RswiftResources.FileResource { .init(name: "ic_active_calendar", pathExtension: "png", bundle: bundle, locale: LocaleReference.none) }
 
-    /// Resource file `password.png`.
-    var passwordPng: RswiftResources.FileResource { .init(name: "password", pathExtension: "png", bundle: bundle, locale: LocaleReference.none) }
+    /// Resource file `icon_password.png`.
+    var icon_passwordPng: RswiftResources.FileResource { .init(name: "icon_password", pathExtension: "png", bundle: bundle, locale: LocaleReference.none) }
 
-    /// Resource file `phone.png`.
-    var phonePng: RswiftResources.FileResource { .init(name: "phone", pathExtension: "png", bundle: bundle, locale: LocaleReference.none) }
+    /// Resource file `icon_phone.png`.
+    var icon_phonePng: RswiftResources.FileResource { .init(name: "icon_phone", pathExtension: "png", bundle: bundle, locale: LocaleReference.none) }
 
     /// Resource file `test.jpeg`.
     var testJpeg: RswiftResources.FileResource { .init(name: "test", pathExtension: "jpeg", bundle: bundle, locale: LocaleReference.none) }
@@ -170,7 +194,7 @@ struct _R {
 
     /// Storyboard `Main`.
     struct main: RswiftResources.StoryboardReference, RswiftResources.InitialControllerContainer {
-      typealias InitialController = UIKit.UITabBarController
+      typealias InitialController = ViewController
 
       let bundle: Foundation.Bundle
 

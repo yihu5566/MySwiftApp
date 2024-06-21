@@ -52,7 +52,7 @@ class Tab: UIView {
             button.setTitle(items[index], for: .normal)
             button.setTitleColor(UIColor.hexColor(0x333333), for: .normal)
             button.setTitleColor(UIColor.hexColor(0xF8892E), for: .selected)
-            addSubview(button)
+            self.addSubview(button)
 
             if index == 0 {
                 selectItemButton = button
@@ -76,7 +76,7 @@ class Tab: UIView {
 
         indicatorView = UIView()
         indicatorView.backgroundColor = UIColor.hexColor(0xF8892E)
-        addSubview(indicatorView)
+        self.addSubview(indicatorView)
         indicatorView.snp.makeConstraints { make in
             make.centerX.equalTo(selectItemButton)
             make.bottom.equalToSuperview()
@@ -98,7 +98,7 @@ class Tab: UIView {
                 make.centerX.equalTo(self.selectItemButton)
                 make.bottom.equalToSuperview()
                 make.width.equalTo(80)
-                make.height.equalTo(8)
+                make.height.equalTo(4)
             }
         }
     }
