@@ -9,7 +9,12 @@ import Foundation
 import UIKit
 import Kingfisher
 
-class HomeViewController :BaseViewController,BannerViewDelegate,BannerViewDataSource{
+class HomeViewController :BaseViewController,BannerViewDelegate,BannerViewDataSource,ProductListDelegate{
+    func didSelectProduct(product: Product) {
+        print("index--->",product.name)
+
+    }
+    
     func numberOfBanners(_ bannerView: BannerView) -> Int {
         return FakeData.creatBanners().count
     }
@@ -38,7 +43,14 @@ class HomeViewController :BaseViewController,BannerViewDelegate,BannerViewDataSo
         bannerView.isInfinite = true
         bannerView.dataSource = self
         view.addSubview(bannerView)
-    
         
+        let productList = ProductList(frame: .zero)
+        productList.items = FakeData.creatProdects()
+        view.addSubview(productList)
+        productList.snp.makeConstraints { make in
+            make.left.right.bottom.equalToSuperview()
+            make.top.equalTo(bannerView.snp.bottom).offset(5)
+        }
+    
     }
 }
