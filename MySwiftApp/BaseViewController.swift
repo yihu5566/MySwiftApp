@@ -8,11 +8,18 @@
 import Foundation
 import UIKit
 class BaseViewController: UIViewController {
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.hexColor(0xf2f4f7)
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.hexColor(0x333333)]
-        edgesForExtendedLayout = UIRectEdge(rawValue: 0)
+    
+        view.backgroundColor = UIColor.hexColor(0xdfdfdf)
+//        // 设置底部和顶部栏背景色为白色
+//        self.navigationController?.navigationBar.barTintColor = UIColor.white
+//        self.tabBarController?.tabBar.barTintColor = UIColor.white
+//        
+        // 设置底部和顶部栏延伸到安全区域
+        let edges = UIRectEdge.bottom.union(.top)
+        self.edgesForExtendedLayout = edges
+
     }
 }

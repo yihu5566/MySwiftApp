@@ -6,39 +6,32 @@
 //
 
 import Foundation
-import UIKit
 import Kingfisher
+import UIKit
 
-class HomeViewController :BaseViewController,BannerViewDelegate,BannerViewDataSource,ProductListDelegate{
+class HomeViewController: BaseViewController, BannerViewDelegate, BannerViewDataSource, ProductListDelegate {
     func didSelectProduct(product: Product) {
-        print("index--->",product.name)
+        print("index--->", product.name)
         let detailVC = DetailViewController()
         detailVC.product = product
         detailVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(detailVC, animated: true)
-
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         hidesBottomBarWhenPushed = false
-        
-        
-        if let statusBarFrame = UIApplication.shared.windows.first?.windowScene?.statusBarManager?.statusBarFrame {
-            let statusBarView = UIView(frame: statusBarFrame)
-            statusBarView.backgroundColor = UIColor.white
-            view.addSubview(statusBarView)
-        }
     }
-    
+
     func numberOfBanners(_ bannerView: BannerView) -> Int {
         return FakeData.creatBanners().count
     }
-    
+
     func viewForBanner(_ bannerView: BannerView, index: Int, coverView: UIView?) -> UIView {
-        if let view = coverView as? UIImageView{
+        if let view = coverView as? UIImageView {
             view.kf.setImage(with: URL(string: FakeData.creatBanners()[index]))
             return view
-        }else{
+        } else {
             let imageView = UIImageView()
             imageView.contentMode = .scaleAspectFill
             imageView.clipsToBounds = true
@@ -46,27 +39,25 @@ class HomeViewController :BaseViewController,BannerViewDelegate,BannerViewDataSo
             return imageView
         }
     }
-    
+
     func didSelectBanner(_ bannerView: BannerView, index: Int) {
-        print("index--->",index)
+        print("index--->", index)
     }
-    var topPadding:CGFloat = 0
-    
+
+    var topPadding : CGFloat = 0
     override func viewDidLoad() {
-        self.view.backgroundColor = .white
-        
+        super.viewDidLoad()
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let topPadding = windowScene.statusBarManager?.statusBarFrame.height {
-               additionalSafeAreaInsets = UIEdgeInsets(top: topPadding, left: 0, bottom: 0, right: 0)
             self.topPadding = topPadding
-           }
-        
-      let bannerView =  BannerView(frame: CGRect(x: 0, y: topPadding, width: UIScreen.main.bounds.width, height: 173))
+        }
+              
+        let bannerView = BannerView(frame: CGRect(x: 0, y: topPadding, width: UIScreen.main.bounds.width, height: 173))
         bannerView.autoScrollInterval = 2
         bannerView.isInfinite = true
         bannerView.dataSource = self
         view.addSubview(bannerView)
-        
+
         let productList = ProductList(frame: .zero)
         productList.items = FakeData.creatProdects()
         productList.delegate = self
@@ -75,6 +66,5 @@ class HomeViewController :BaseViewController,BannerViewDelegate,BannerViewDataSo
             make.left.right.bottom.equalToSuperview()
             make.top.equalTo(bannerView.snp.bottom).offset(5)
         }
-    
     }
 }

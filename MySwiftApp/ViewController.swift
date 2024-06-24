@@ -8,11 +8,10 @@
 import UIKit
 
 class ViewController: UITabBarController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-                
+ 
         let homeVC = HomeViewController()
         homeVC.tabBarItem.image =  UIImage(named: "Image-Tab-Salon-Inactive")
         homeVC.tabBarItem.selectedImage = UIImage(named: "Image-Tab-Salon-Active")?.withRenderingMode(.alwaysOriginal)
@@ -29,7 +28,6 @@ class ViewController: UITabBarController {
         let navigationMineVC = UINavigationController(rootViewController: mineVC)
         self.addChild(navigationMineVC)
         
-        tabBar.tintColor = .orange
 
     }
 
