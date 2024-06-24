@@ -112,6 +112,31 @@ class DetailViewController: BaseViewController {
             make.left.equalTo(topView).offset(20)
             make.bottom.equalTo(topView).offset(-20)
         }
+//        学生lab
+        
+        let studentAtttachment = NSTextAttachment()
+        studentAtttachment.image = R.image.icon_password()
+        studentAtttachment.bounds = CGRect(x: -2, y: -3, width: bookAtttachment.image?.size.width ?? 20/2, height: (bookAtttachment.image?.size.height ?? 20)/2)
+        
+        let studentAtttachmentString = NSAttributedString(attachment: studentAtttachment)
+        let studentCountString = NSMutableAttributedString(string: "")
+        studentCountString.append(studentAtttachmentString)
+        
+        let studentCountStringAfterIcon = NSAttributedString(string: " 共 \(product.total) 人学习 ")
+        
+        studentCountString.append(studentCountStringAfterIcon)
+        
+        studentCountLable = UILabel(frame: .zero)
+        studentCountLable.textColor = .white
+        studentCountLable.font = UIFont.systemFont(ofSize: 14)
+        studentCountLable.attributedText = studentCountString
+        
+        topView.addSubview(studentCountLable)
+        studentCountLable.snp.makeConstraints { make in
+            make.left.equalTo(studentCountLable)
+            make.right.equalToSuperview().offset(-20)
+            make.bottom.equalTo(topView).offset(-20)
+        }
         
     }
     func createMiddle()  {
