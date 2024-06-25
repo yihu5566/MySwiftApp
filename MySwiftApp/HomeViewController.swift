@@ -9,14 +9,17 @@ import Foundation
 import Kingfisher
 import UIKit
 
-class HomeViewController: BaseViewController, BannerViewDelegate, BannerViewDataSource, ProductListDelegate {
-    func didSelectProduct(product: Product) {
-        print("index--->", product.name)
-        let detailVC = DetailViewController()
-        detailVC.product = product
-        detailVC.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(detailVC, animated: true)
+class HomeViewController: BaseViewController, BannerViewDelegate, BannerViewDataSource, CommonListDelegate {
+    func didSelectItem<Item>(_ item: Item) {
+        if let item = item as? Product {
+            let detailVC = DetailViewController()
+            detailVC.product = item
+            detailVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
+    
+  
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -59,7 +62,7 @@ class HomeViewController: BaseViewController, BannerViewDelegate, BannerViewData
         bannerView.dataSource = self
         view.addSubview(bannerView)
 
-        let productList = ProductList(frame: .zero)
+        let productList = CommonList<Product,ProductCell>(frame: .zero)
         productList.items = FakeData.creatProdects()
         productList.delegate = self
         view.addSubview(productList)

@@ -24,14 +24,14 @@ class DetailViewController: BaseViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "详情"
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.configureWithOpaqueBackground()
-        navBarAppearance.backgroundColor = .gray // 设置导航栏背景色
-        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white] // 设置导航栏标题颜色
-
-        navigationController?.navigationBar.standardAppearance = navBarAppearance
-        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-        
+//        let navBarAppearance = UINavigationBarAppearance()
+//        navBarAppearance.configureWithOpaqueBackground()
+//        navBarAppearance.backgroundColor = .gray // 设置导航栏背景色
+//        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white] // 设置导航栏标题颜色
+//
+//        navigationController?.navigationBar.standardAppearance = navBarAppearance
+//        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+//        
         createTop()
         createMiddle()
         createBottom()

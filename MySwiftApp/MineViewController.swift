@@ -80,6 +80,7 @@ class MineViewController: BaseViewController {
         purchasedCell = CommonCell()
         purchasedCell.icon = R.image.ic_active_calendar()
         purchasedCell.title = "已经购买"
+        purchasedCell.addTarget(self, action: #selector(didClickDealButton), for: .touchUpInside)
         view.addSubview(purchasedCell)
         purchasedCell.snp.makeConstraints { make in
             make.top.equalTo(self.accountCell.snp.bottom)
@@ -107,7 +108,11 @@ class MineViewController: BaseViewController {
             make.height.equalTo(55)
         }
         
-        
-        
+    }
+    
+    @objc func didClickDealButton(){
+        let LoginVC = DealListViewController()
+        LoginVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(LoginVC, animated: true)
     }
 }

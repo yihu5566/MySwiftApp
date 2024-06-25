@@ -25,10 +25,13 @@
 		D6AFA18C2C25797F00185A81 /* home_address.png in Resources */ = {isa = PBXBuildFile; fileRef = D6AFA1872C25797F00185A81 /* home_address.png */; };
 		D6AFA18D2C25797F00185A81 /* icon_password.png in Resources */ = {isa = PBXBuildFile; fileRef = D6AFA1882C25797F00185A81 /* icon_password.png */; };
 		D6AFA18E2C25797F00185A81 /* ic_active_calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = D6AFA1892C25797F00185A81 /* ic_active_calendar.png */; };
+		D6B039BA2C2A8E7600D3586D /* DealListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B039B92C2A8E7600D3586D /* DealListViewController.swift */; };
+		D6B039BC2C2A8ECE00D3586D /* CommonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B039BB2C2A8ECE00D3586D /* CommonList.swift */; };
+		D6B039BE2C2A998A00D3586D /* DealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B039BD2C2A998A00D3586D /* DealCell.swift */; };
 		D6B1C0C22C23D14100212E4D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1C0C12C23D14100212E4D /* HomeViewController.swift */; };
 		D6B1C0C42C23D1DC00212E4D /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1C0C32C23D1DC00212E4D /* MineViewController.swift */; };
 		D6B1C0E82C24068700212E4D /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1C0E72C24068700212E4D /* BannerView.swift */; };
-		D6B1C0EA2C2428B100212E4D /* ProductList .swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1C0E92C2428B100212E4D /* ProductList .swift */; };
+		D6B1C0EA2C2428B100212E4D /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1C0E92C2428B100212E4D /* ProductCell.swift */; };
 		D6DF789E2C129FCA005C5D66 /* Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DF789D2C129FCA005C5D66 /* Deal.swift */; };
 		D6DF78A02C12A02D005C5D66 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DF789F2C12A02D005C5D66 /* FakeData.swift */; };
 		D6DF78A32C12AE2B005C5D66 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DF78A22C12AE2B005C5D66 /* UIColor.swift */; };
@@ -61,10 +64,13 @@
 		D6AFA1872C25797F00185A81 /* home_address.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_address.png; sourceTree = "<group>"; };
 		D6AFA1882C25797F00185A81 /* icon_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_password.png; sourceTree = "<group>"; };
 		D6AFA1892C25797F00185A81 /* ic_active_calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_active_calendar.png; sourceTree = "<group>"; };
+		D6B039B92C2A8E7600D3586D /* DealListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListViewController.swift; sourceTree = "<group>"; };
+		D6B039BB2C2A8ECE00D3586D /* CommonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonList.swift; sourceTree = "<group>"; };
+		D6B039BD2C2A998A00D3586D /* DealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealCell.swift; sourceTree = "<group>"; };
 		D6B1C0C12C23D14100212E4D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D6B1C0C32C23D1DC00212E4D /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		D6B1C0E72C24068700212E4D /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
-		D6B1C0E92C2428B100212E4D /* ProductList .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductList .swift"; sourceTree = "<group>"; };
+		D6B1C0E92C2428B100212E4D /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		D6DF789D2C129FCA005C5D66 /* Deal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deal.swift; sourceTree = "<group>"; };
 		D6DF789F2C12A02D005C5D66 /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
 		D6DF78A22C12AE2B005C5D66 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 				D6B1C0C12C23D14100212E4D /* HomeViewController.swift */,
 				D6B1C0C32C23D1DC00212E4D /* MineViewController.swift */,
 				D6AFA1812C25298100185A81 /* DetailViewController.swift */,
+				D6B039B92C2A8E7600D3586D /* DealListViewController.swift */,
 			);
 			path = MySwiftApp;
 			sourceTree = "<group>";
@@ -174,9 +181,11 @@
 			isa = PBXGroup;
 			children = (
 				D6B1C0E72C24068700212E4D /* BannerView.swift */,
-				D6B1C0E92C2428B100212E4D /* ProductList .swift */,
+				D6B1C0E92C2428B100212E4D /* ProductCell.swift */,
 				D6AFA1832C252C7500185A81 /* Tab.swift */,
 				D6A908992C294B0300F0EE56 /* CommonCell.swift */,
+				D6B039BB2C2A8ECE00D3586D /* CommonList.swift */,
+				D6B039BD2C2A998A00D3586D /* DealCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -334,10 +343,12 @@
 			files = (
 				D61BEFB32C10651900330902 /* ViewController.swift in Sources */,
 				D6AB05A52C11AF4A00F77090 /* Product.swift in Sources */,
+				D6B039BA2C2A8E7600D3586D /* DealListViewController.swift in Sources */,
+				D6B039BE2C2A998A00D3586D /* DealCell.swift in Sources */,
 				D6AB05A82C11B79400F77090 /* R.generated.swift in Sources */,
 				D6DF789E2C129FCA005C5D66 /* Deal.swift in Sources */,
 				D6A9089A2C294B0400F0EE56 /* CommonCell.swift in Sources */,
-				D6B1C0EA2C2428B100212E4D /* ProductList .swift in Sources */,
+				D6B1C0EA2C2428B100212E4D /* ProductCell.swift in Sources */,
 				D61BEFAF2C10651900330902 /* AppDelegate.swift in Sources */,
 				D6B1C0C22C23D14100212E4D /* HomeViewController.swift in Sources */,
 				D6DF78A52C12B6B0005C5D66 /* BaseViewController.swift in Sources */,
@@ -348,6 +359,7 @@
 				D6DF78A02C12A02D005C5D66 /* FakeData.swift in Sources */,
 				D6AFA1822C25298100185A81 /* DetailViewController.swift in Sources */,
 				D6B1C0E82C24068700212E4D /* BannerView.swift in Sources */,
+				D6B039BC2C2A8ECE00D3586D /* CommonList.swift in Sources */,
 				D6B1C0C42C23D1DC00212E4D /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
