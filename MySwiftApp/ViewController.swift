@@ -28,7 +28,6 @@ class ViewController: UITabBarController {
         let navigationMineVC = UINavigationController(rootViewController: mineVC)
         self.addChild(navigationMineVC)
         
-
     }
 
 }

@@ -47,11 +47,12 @@ class HomeViewController: BaseViewController, BannerViewDelegate, BannerViewData
     var topPadding : CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-           let topPadding = windowScene.statusBarManager?.statusBarFrame.height {
-            self.topPadding = topPadding
-        }
-              
+//        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+//           let topPadding = windowScene.statusBarManager?.statusBarFrame.height {
+//            self.topPadding = topPadding
+//        }
+        self.view.backgroundColor = .white
+
         let bannerView = BannerView(frame: CGRect(x: 0, y: topPadding, width: UIScreen.main.bounds.width, height: 173))
         bannerView.autoScrollInterval = 2
         bannerView.isInfinite = true

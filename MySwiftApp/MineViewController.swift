@@ -20,10 +20,11 @@ class MineViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()     
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-           let topPadding = windowScene.statusBarManager?.statusBarFrame.height {
-            self.topPadding = topPadding
-        }
+//        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+//           let topPadding = windowScene.statusBarManager?.statusBarFrame.height {
+//            self.topPadding = topPadding
+//        }
+        self.view.backgroundColor = .white
         self.creatTopViews()
         self.creatFirstGroupCells()
     }
