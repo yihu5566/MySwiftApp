@@ -24,5 +24,24 @@ class BaseViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.white
         navigationController?.navigationBar.isTranslucent = false
         tabBarController?.tabBar.barTintColor = UIColor.white
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = UIColor.hexColor(0xdfdfdf) // 设置导航栏背景色
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white] // 设置导航栏标题颜色
+
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
+        
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBarAppearance.backgroundColor = UIColor.hexColor(0xdfdfdf) // 设置导航栏背景色
+        
+        tabBarController?.tabBar.standardAppearance = tabBarAppearance
+        tabBarController?.tabBar.scrollEdgeAppearance = tabBarAppearance
+        
+        
+        
     }
 }
